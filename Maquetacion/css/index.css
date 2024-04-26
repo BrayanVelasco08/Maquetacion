@@ -1,0 +1,265 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    /* adds animation for all transitions */
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+.menu {
+    display: flex; /* Utiliza flexbox */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.menu-item.menu-titulo {
+    flex: 1; /* Permite que el elemento ocupe el espacio restante */
+    text-align: center; /* Centra el texto */
+}
+/* Makes sure that everything is 100% height */
+
+html,body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* gets the actual input out of the way;
+we're going to style the label instead */
+
+#drawer-toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+#drawer-toggle-label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    left: 0px;
+    height:50px;
+    width: 50px;
+    display: block;
+    position: fixed;
+    background: rgba(255,255,255,.0);
+    z-index: 1;
+}
+
+/* adds our "hamburger" menu icon */
+
+#drawer-toggle-label:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background: #ffffff;
+    left: 13px;
+    top: 18px;
+    box-shadow: 0 6px 0 #ffffff, 0 12px 0 #ffffff;
+}
+
+header {
+    width: 100%;
+    left: 0px;
+    padding: 10px 10px 10px 50px;
+    font-size: 100%;
+    line-height: 30px;
+    z-index: 0;
+    background-color: #085aa5;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+header .img-logo .bx{
+    font-size: 300%;
+    text-decoration: none;
+    color: white;
+}
+.menu-item.img-logo {
+    order: -1;
+}
+
+.menu-item.img-logo .bx {
+    font-size: 300%;
+    text-decoration: none;
+    color: white;
+}
+
+header .menu-boton {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 2%;
+}
+
+header .menu-boton ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .menu-boton ul li {
+    margin-right: 10px;
+}
+
+header .menu-boton .bx {
+    font-size: 200%;
+    text-decoration: none;
+    color: white;
+}
+
+/* drawer menu pane - note the 0px width */
+
+#drawer {
+    position: fixed;
+    top: 60px;
+    left:-300px;
+    height: 100%;
+    width: 200px;
+    background: #484848;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+#drawer::-webkit-scrollbar {
+    display: none;
+}
+/* actual page content pane */
+
+#page-content {
+    margin-left: 0px;
+    margin-top: 50px;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-x:hidden;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+}
+#page-content::-webkit-scrollbar {
+    display: none;
+}
+/* checked styles (menu open state) */
+#drawer-toggle:checked ~ #drawer {
+    left: 0px;
+}
+
+#drawer-toggle:checked ~ #page-content {
+    margin-left: 10.4%;
+}
+
+/* Menu item styles */
+
+#drawer ul {
+    list-style-type:none;
+}
+
+#drawer ul a {
+    padding:10px;
+    color:#c7c7c7;
+    text-decoration:none;
+    font: caption;
+}
+
+#drawer ul i{
+    padding: 10px;
+    font-size: 200%;
+    color: white;
+}
+
+#drawer ul a:hover {
+    color:white;
+}
+
+/* Responsive MQ */
+
+@media all and (max-width:350px) {
+
+    #drawer-toggle:checked ~ #drawer-toggle-label {
+        height: 100%;
+        width: 50px;
+    }
+
+    #drawer-toggle:checked ~ #drawer-toggle-label,
+    #drawer-toggle:checked ~ header {
+        left: calc(100% - 50px);
+    }
+
+    #drawer-toggle:checked ~ #drawer {
+        width: calc(100% - 50px);
+        padding: 20px;
+    }
+
+    #drawer-toggle:checked ~ #page-content {
+        margin-left: calc(100% - 50px);
+    }
+
+}
+
+
+/* Estilos para el menú desplegable */
+#drawer {
+    background-color: #333;
+    padding: 20px;
+}
+
+#drawer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#drawer ul li {
+    margin-bottom: 10px;
+}
+
+#drawer ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+#drawer ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilos para los subenlaces */
+#drawer ul ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+#drawer ul ul li {
+    margin-bottom: 5px;
+}
+
+#drawer ul ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    transition: background-color 0.3s;
+    font-size: 13px;
+}
+
+#drawer ul ul li a:hover {
+    background-color: #777;
+}

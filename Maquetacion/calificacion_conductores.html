@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Menú</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!-- ICONOS BOTONES -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+<div id="menu-container">
+    <input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
+    <label for="drawer-toggle" id="drawer-toggle-label"></label>
+    <header class="menu">
+        <div class="menu-item menu-boton">
+            <ul><li><a href="login.html"><i class='bx bxs-user-circle' ></i></a></li></ul>
+            <ul><li><a href="login.html"><i class='bx bxs-bell' ></i></a></li></ul>
+        </div>
+        <div class="menu-item menu-titulo">
+            <h1>Calificacion de Conductores</h1>
+        </div>
+        <div class="menu-item img-logo">
+            <a href="analisis_conductores.html">
+                <i class="bx bxs-business"></i>
+            </a>
+        </div>
+    </header>
+    <nav id="drawer">
+        <ul>
+            <li>
+                <a href="analisis_conductores.html">
+                    <i class='bx bx-spreadsheet'></i>Analisis
+                </a>
+                <!-- Sublista de enlaces -->
+                <ul>
+                    <li><a href="sublink1.html">Informe Individual de Conductores</a></li>
+                    <li><a href="sublink2.html">Ranking de Conductores</a></li>
+                    <li><a href="sublink2.html">Analisis de Conductores</a></li>
+                    <!-- Agrega más elementos <li> según sea necesario -->
+                </ul>
+            </li>
+            <li><a href="calificacion_conductores.html"><i class='bx bxs-user-detail'></i>Calificacion</a></li>
+            <li><a href="informes_graficos.html"><i class='bx bxs-bar-chart-alt-2' ></i>Informes</a></li>
+        </ul>
+    </nav>
+    <div id="page-content">
+        <p>Page Content</p>
+    </div>
+</div>
+</body>
+</html>
