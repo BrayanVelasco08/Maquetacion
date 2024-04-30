@@ -3,7 +3,6 @@
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-    /* adds animation for all transitions */
     -webkit-transition: .25s ease-in-out;
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
@@ -13,24 +12,22 @@
     -webkit-text-size-adjust: none;
 }
 .menu {
-    display: flex; /* Utiliza flexbox */
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu-item.menu-titulo {
-    flex: 1; /* Permite que el elemento ocupe el espacio restante */
-    text-align: center; /* Centra el texto */
+    flex: 1;
+    text-align: center;
 }
-/* Makes sure that everything is 100% height */
+
 
 html,body {
     height: 100%;
     overflow: hidden;
 }
 
-/* gets the actual input out of the way;
-we're going to style the label instead */
 
 #drawer-toggle {
     position: absolute;
@@ -143,7 +140,6 @@ header .menu-boton .bx {
 #page-content {
     margin-left: 0px;
     margin-top: 50px;
-    width: 100%;
     height: calc(100% - 50px);
     overflow-x:hidden;
     overflow-y:scroll;
@@ -214,7 +210,7 @@ header .menu-boton .bx {
 /* Estilos para el menú desplegable */
 #drawer {
     background-color: #333;
-    padding: 20px;
+    padding: 0px;
 }
 
 #drawer ul {
@@ -233,8 +229,8 @@ header .menu-boton .bx {
     padding: 10px;
     font-size: 16px;
     transition: background-color 0.3s;
-    display: flex; /* Utiliza flexbox */
-    align-items: center; /* Centra verticalmente los elementos */
+    display: flex;
+    align-items: center;
 }
 
 #drawer ul li a:hover {
@@ -244,7 +240,7 @@ header .menu-boton .bx {
 /* Estilos para los subenlaces */
 #drawer ul ul {
     margin-top: 5px;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 #drawer ul ul li {
@@ -255,11 +251,101 @@ header .menu-boton .bx {
     color: #fff;
     text-decoration: none;
     display: block;
-    padding: 5px;
+    padding: 16px;
     transition: background-color 0.3s;
     font-size: 13px;
 }
 
 #drawer ul ul li a:hover {
     background-color: #777;
+}
+
+.sublinks input[type="date"] {
+    display: block;
+    border: none;
+    margin: 8px auto;
+    width: 161px;
+    background-color: #eaeaea;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+.sublinks button {
+    display: block;
+    border: none;
+    margin: 13px auto;
+    width: 160px;
+    background-color: #085aa5;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sublinks button:hover {
+    background-color: #074074;
+}
+
+h3 {
+    color: white;
+}
+
+#drawer ul li ul li h3 {
+    font: caption;
+    color: white;
+}
+
+#nombre_conductor {
+    font: 18px Helvetica, Arial, sans-serif;
+    display: block;
+    border: none;
+    padding: 10px;
+    width: 148px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Contenido Página */
+#page-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columna {
+    width: 48%;
+}
+
+.cuadro-gris {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.cuadro-gris p {
+    margin: 0;
+    padding: 10px;
+}
+
+.columna h2 {
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+#page-content.sliderbar-abierto {
+    margin-left: 300px;
+}
+
+/*Fechas*/
+.sublinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

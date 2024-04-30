@@ -19,7 +19,7 @@
             <ul><li><a href="login.html"><i class='bx bxs-bell' ></i></a></li></ul>
         </div>
         <div class="menu-item menu-titulo">
-            <h1>Calificacion de Conductores</h1>
+            <h1>Leaderboard de Conductores</h1>
         </div>
         <div class="menu-item img-logo">
             <a href="analisis_conductores.html">
@@ -29,20 +29,19 @@
     </header>
     <nav id="drawer">
         <ul>
-            <li>
-                <a href="analisis_conductores.html">
-                    <i class='bx bx-spreadsheet'></i>Analisis
-                </a>
-                <!-- Sublista de enlaces -->
+            <li><a href="analisis_conductores.html"><i class='bx bx-spreadsheet'></i>Analisis</a></li>
+            <li><a href="informes_graficos.html"><i class='bx bxs-bar-chart-alt-2' ></i>Informes</a><ul></ul></li>
+            <li><a href="calificacion_conductores.html"><i class='bx bxs-user-detail'></i>Calificacion</a>
                 <ul>
-                    <li><a href="sublink1.html">Informe Individual de Conductores</a></li>
-                    <li><a href="sublink2.html">Ranking de Conductores</a></li>
-                    <li><a href="sublink2.html">Analisis de Conductores</a></li>
-                    <!-- Agrega más elementos <li> según sea necesario -->
+                    <li><h3>Nombre Conductor</h3><input type="text" id="nombre_conductor" placeholder="Ingresa Nombre..." oninput="actualizarCampos()"></li>
+                    <li><h3>Clasificación</h3><a href="#"></a></li>
+                    <li><h3>Aceleraciones Bruscas</h3><a href="#"></a></li>
+                    <li><h3>Frenadas Bruscas</h3><a href="#"></a></li>
+                    <li><h3>Conducción No Predictiva</h3><a href="#"></a></li>
+                    <li><h3>RPM Zona Roja</h3><a href="#"></a></li>
+                    <li><h3>PUNTAJE TOTAL</h3><a href="#"></a></li>
                 </ul>
             </li>
-            <li><a href="calificacion_conductores.html"><i class='bx bxs-user-detail'></i>Calificacion</a></li>
-            <li><a href="informes_graficos.html"><i class='bx bxs-bar-chart-alt-2' ></i>Informes</a></li>
         </ul>
     </nav>
     <div id="page-content">

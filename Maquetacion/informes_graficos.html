@@ -19,7 +19,7 @@
             <ul><li><a href="login.html"><i class='bx bxs-bell' ></i></a></li></ul>
         </div>
         <div class="menu-item menu-titulo">
-            <h1>Informe Graficos</h1>
+            <h1>Informe Gráfico de Conductores</h1>
         </div>
         <div class="menu-item img-logo">
             <a href="analisis_conductores.html">
@@ -29,20 +29,18 @@
     </header>
     <nav id="drawer">
         <ul>
+            <li><a href="analisis_conductores.html"><i class='bx bx-spreadsheet'></i>Analisis</a></li>
             <li>
-                <a href="analisis_conductores.html">
-                    <i class='bx bx-spreadsheet'></i>Analisis
-                </a>
-                <!-- Sublista de enlaces -->
-                <ul>
-                    <li><a href="sublink1.html">Informe Individual de Conductores</a></li>
-                    <li><a href="sublink2.html">Ranking de Conductores</a></li>
-                    <li><a href="sublink2.html">Analisis de Conductores</a></li>
-                    <!-- Agrega más elementos <li> según sea necesario -->
-                </ul>
+                <a href="#"><i class='bx bxs-bar-chart-alt-2'></i>Informes</a>
+                <div class="sublinks">
+                    <h3>Desde:</h3>
+                    <input type="date" id="fecha_desde" name="fecha_desde">
+                    <h3>Hasta:</h3>
+                    <input type="date" id="fecha_hasta" name="fecha_hasta">
+                    <button onclick="consultar()">Consultar</button>
+                </div>
             </li>
             <li><a href="calificacion_conductores.html"><i class='bx bxs-user-detail'></i>Calificacion</a></li>
-            <li><a href="informes_graficos.html"><i class='bx bxs-bar-chart-alt-2' ></i>Informes</a></li>
         </ul>
     </nav>
     <div id="page-content">
