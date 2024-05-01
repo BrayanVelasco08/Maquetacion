@@ -33,19 +33,43 @@
             <li><a href="informes_graficos.html"><i class='bx bxs-bar-chart-alt-2' ></i>Informes</a><ul></ul></li>
             <li><a href="calificacion_conductores.html"><i class='bx bxs-user-detail'></i>Calificacion</a>
                 <ul>
-                    <li><h3>Nombre Conductor</h3><input type="text" id="nombre_conductor" placeholder="Ingresa Nombre..." oninput="actualizarCampos()"></li>
+                    <li><h3><span style="font-weight: bold;">Nombre Conductor</span></h3><input type="text" id="nombre_conductor" placeholder="Ingresa Nombre..." oninput="actualizarCampos()"></li>
                     <li><h3>Clasificación</h3><a href="#"></a></li>
                     <li><h3>Aceleraciones Bruscas</h3><a href="#"></a></li>
                     <li><h3>Frenadas Bruscas</h3><a href="#"></a></li>
                     <li><h3>Conducción No Predictiva</h3><a href="#"></a></li>
                     <li><h3>RPM Zona Roja</h3><a href="#"></a></li>
-                    <li><h3>PUNTAJE TOTAL</h3><a href="#"></a></li>
+                    <li><h3><span style="font-weight: bold;">PUNTAJE TOTAL</span></h3><a href="#"></a></li>
                 </ul>
             </li>
         </ul>
     </nav>
     <div id="page-content">
-        <p>Page Content</p>
+        <div class="columna">
+            <div class="cuadro-mapa1">
+                <p>MAPA (OPCIONAL)</p>
+            </div>
+            <div class="cuadro-mapa1">
+                <p>Fecha y Hora</p>
+                <p>Velocidad</p>
+                <p>RPM</p>
+                <p>Combustible</p>
+                <p>Consumo Instantaneo</p>
+            </div>
+        </div>
+        <div class="columna">
+            <h2 class="titule-grafico">VELOCIDAD MEDIA</h2>
+            <div class="cuadro-mapa2">
+                <p>(GRAFICO BARRAS)</p>
+            </div>
+            <h2 class="titule-grafico">RPM</h2>
+            <div class="cuadro-mapa2">
+                <p>(GRAFICO PUNTOS)</p>
+            </div>
+        </div>
+        <div class="contenido-adicional">
+            <!-- Tu contenido adicional aquí -->
+        </div>
     </div>
 </div>
 </body>

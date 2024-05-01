@@ -349,3 +349,47 @@ h3 {
     flex-direction: column;
     align-items: center;
 }
+
+/*calificacion_conductores.html*/
+.columna .cuadro-mapa1:nth-child(1) {
+    height: 300px;
+    background: #80808040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.columna .cuadro-mapa1:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #dfdfdf;
+    padding: 27px;
+    margin-top: 25px;
+    padding-bottom: 300px;
+    text-transform: uppercase;
+}
+
+.columna h2 {
+    background-color: white;
+}
+
+.columna h2 + .cuadro-mapa2 {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 49px;
+    margin-top: 2px;
+    padding-bottom: 200px;
+}
+
+.columna h2 + .cuadro-mapa + h2 + .cuadro-mapa {
+    background-color: white;
+    padding-bottom: 200px;
+}
+.titule-grafico{
+    display: flex;
+    justify-content: space-around;
+}
